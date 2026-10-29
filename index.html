@@ -82,7 +82,7 @@ input,select{width:100%;padding:13px;border:1px solid #d9dfe6;border-radius:12px
 <label>Escolha o tamanho da fralda</label>
 <div class="tamanhos">
 <button class="tamanho" type="button" data-tamanho="P">P</button>
-<button class="tamanho ativo" type="button" data-tamanho="M">M</button>
+<button class="tamanho" type="button" data-tamanho="M">M</button>
 <button class="tamanho" type="button" data-tamanho="G">G</button>
 <button class="tamanho" type="button" data-tamanho="GG">GG</button>
 </div>
@@ -100,7 +100,7 @@ input,select{width:100%;padding:13px;border:1px solid #d9dfe6;border-radius:12px
 </main>
 
 <script>
-let tamanhoEscolhido = "M";
+let tamanhoEscolhido = "";
 
 document.querySelectorAll(".tamanho").forEach(botao => {
   botao.addEventListener("click", () => {
@@ -116,7 +116,10 @@ document.getElementById("formulario").addEventListener("submit", function(event)
   const nome = document.getElementById("nomeConvidado").value.trim();
   const adultos = document.getElementById("adultos").value;
   const criancas = document.getElementById("criancas").value;
-
+if (!tamanhoEscolhido) {
+  alert("Por favor, escolha o tamanho da fralda: P, M, G ou GG.");
+  return;
+}
   const mensagem =
     "Olá! Quero confirmar minha presença no Chá de Fraldas e Chá Revelação de Anthony ou Mavie.%0A%0A" +
     "Nome: " + encodeURIComponent(nome) + "%0A" +
