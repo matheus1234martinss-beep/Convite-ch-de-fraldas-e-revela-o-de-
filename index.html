@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff1f5">
+<title>Chá Revelação — Anthony ou Mavie</title>
+<style>
+:root{--rosa:#e879a0;--azul:#6daee8;--dourado:#c9a15b;--texto:#42566a}
+*{box-sizing:border-box}
+body{margin:0;padding:18px 12px 30px;background:linear-gradient(140deg,#fff7ed,#fff0f5,#edf7ff);font-family:Arial,sans-serif;color:var(--texto)}
+.card{max-width:650px;margin:auto;background:#fffdf9;border:1px solid #e7c98f;border-radius:28px;overflow:hidden;box-shadow:0 12px 35px #687d9120}
+.top{text-align:center;padding:30px 20px 24px}
+.decor{font-size:38px;animation:flutuar 3s ease-in-out infinite}
+.ursinhos{font-size:66px;margin:8px}
+.small{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#ae8950;font-weight:bold}
+h1{font-family:Georgia,serif;font-size:clamp(32px,8vw,48px);line-height:1.1;color:var(--azul);margin:14px 0}
+h1 span{display:block;color:var(--rosa);font-style:italic}
+.nome{display:inline-block;padding:12px 22px;border:1px solid #e7c98f;border-radius:40px;background:linear-gradient(90deg,#eaf6ff,#fff0f5);font:28px Georgia,serif;color:#558cbd}
+p{line-height:1.6}
+.bloco{padding:0 20px 20px}
+.info{display:grid;grid-template-columns:1fr;gap:10px}
+.item{padding:14px;background:white;border:1px solid #e9edf0;border-radius:15px;display:flex;gap:12px;align-items:center}
+.emoji{font-size:24px}
+.item b{display:block;font-size:12px;color:#9a8190;text-transform:uppercase;margin-bottom:5px}
+h2{font:26px Georgia,serif;text-align:center;color:#b8894a;margin:8px 0 14px}
+label{display:block;font-weight:bold;font-size:14px;margin:15px 0 7px}
+input,select{width:100%;padding:13px;border:1px solid #d9dfe6;border-radius:12px;font-size:16px;background:white;color:#334}
+.tamanhos{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.tamanho{padding:13px 4px;border:1px solid #e6c5d0;border-radius:12px;background:#fff5f8;color:#9c5271;font-weight:bold;font-size:16px}
+.tamanho.ativo{background:#d96e95;color:white;border-color:#d96e95;box-shadow:0 3px 10px #d96e9540}
+.btn{display:block;width:100%;border:0;border-radius:30px;padding:15px;margin-top:12px;text-align:center;text-decoration:none;font-weight:bold;font-size:15px;color:white;cursor:pointer}
+.verde{background:#149b65}
+.azulbtn{background:#398fd5}
+.rosa{background:#df7297}
+.presente{text-align:center;background:linear-gradient(100deg,#fff2f6,#f0f8ff);border:1px dashed #e6b8c8;border-radius:16px;padding:16px;margin-top:18px}
+.rodape{text-align:center;padding:4px 20px 26px;font:italic 22px Georgia,serif;color:#c66f94}
+.aviso{font-size:12px;color:#7a8794;text-align:center}
+@keyframes flutuar{50%{transform:translateY(-7px)}}
+@media(min-width:500px){.info{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main class="card">
+<header class="top">
+<div class="decor">🎈 🩵 🎀 🩷 🎈</div>
+<div class="ursinhos">🧸💕🧸</div>
+<div class="small">Você é nosso convidado especial</div>
+<h1>Chá de Fraldas <span>& Chá Revelação</span></h1>
+<div class="nome">Anthony ou Mavie</div>
+<p>Um grande amor está chegando! Venha celebrar conosco esse momento cheio de carinho, alegria e surpresa.</p>
+</header>
+
+<section class="bloco info">
+<div class="item"><span class="emoji">📅</span><div><b>Data</b>28 de novembro de 2026</div></div>
+<div class="item"><span class="emoji">🕔</span><div><b>Horário</b>17:00</div></div>
+<div class="item"><span class="emoji">📍</span><div><b>Endereço</b>Rua Francisco Bento, 448 - Planalto</div></div>
+<div class="item"><span class="emoji">🎁</span><div><b>Presente</b>Fralda e um mimo</div></div>
+</section>
+
+<section class="bloco">
+<h2>Confirme sua presença 💌</h2>
+<form id="formulario">
+<label for="nomeConvidado">Seu nome</label>
+<input id="nomeConvidado" required placeholder="Digite seu nome">
+
+<label for="adultos">Quantidade de adultos</label>
+<select id="adultos" required>
+<option value="1">1 adulto</option><option value="2">2 adultos</option>
+<option value="3">3 adultos</option><option value="4">4 adultos</option>
+<option value="5">5 adultos</option>
+</select>
+
+<label for="criancas">Quantidade de crianças</label>
+<select id="criancas" required>
+<option value="0">Nenhuma</option><option value="1">1 criança</option>
+<option value="2">2 crianças</option><option value="3">3 crianças</option>
+<option value="4">4 crianças</option><option value="5">5 crianças</option>
+</select>
+
+<label>Escolha o tamanho da fralda</label>
+<div class="tamanhos">
+<button class="tamanho" type="button" data-tamanho="P">P</button>
+<button class="tamanho ativo" type="button" data-tamanho="M">M</button>
+<button class="tamanho" type="button" data-tamanho="G">G</button>
+<button class="tamanho" type="button" data-tamanho="GG">GG</button>
+</div>
+<p class="aviso">Escolha o tamanho desejado. A disponibilidade dos tamanhos será conectada ao sistema online na próxima etapa.</p>
+
+<button class="btn verde" type="submit">💚 Confirmar pelo WhatsApp</button>
+</form>
+
+<a class="btn azulbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Rua%20Francisco%20Bento%2C%20448%20-%20Planalto">📍 Abrir localização no Google Maps</a>
+<a class="btn rosa" target="_blank" rel="noopener" href="https://wa.me/5585991044879?text=Ol%C3%A1%21%20Quero%20enviar%20uma%20foto%20ou%20mensagem%20para%20o%20mural%20do%20ch%C3%A1.">📸 Enviar foto ou mensagem</a>
+
+<div class="presente"><strong>🧸 Um mimo cheio de carinho</strong><p>Sugerimos um pacote de fraldas no tamanho escolhido e um mimo. Sua presença é muito especial para nós!</p></div>
+</section>
+<footer class="rodape">Esperamos por você! ♥</footer>
+</main>
+
+<script>
+let tamanhoEscolhido = "M";
+
+document.querySelectorAll(".tamanho").forEach(botao => {
+  botao.addEventListener("click", () => {
+    tamanhoEscolhido = botao.dataset.tamanho;
+    document.querySelectorAll(".tamanho").forEach(b => b.classList.remove("ativo"));
+    botao.classList.add("ativo");
+  });
+});
+
+document.getElementById("formulario").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const nome = document.getElementById("nomeConvidado").value.trim();
+  const adultos = document.getElementById("adultos").value;
+  const criancas = document.getElementById("criancas").value;
+
+  const mensagem =
+    "Olá! Quero confirmar minha presença no Chá de Fraldas e Chá Revelação de Anthony ou Mavie.%0A%0A" +
+    "Nome: " + encodeURIComponent(nome) + "%0A" +
+    "Adultos: " + adultos + "%0A" +
+    "Crianças: " + criancas + "%0A" +
+    "Tamanho da fralda: " + tamanhoEscolhido + "%0A" +
+    "Data: 28/11/2026 às 17:00%0A" +
+    "Endereço: Rua Francisco Bento, 448 - Planalto";
+
+  window.open("https://wa.me/5585991044879?text=" + mensagem, "_blank");
+});
+</script>
+</body>
+</html>
